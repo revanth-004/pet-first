@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet first</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- LANDING PAGE -->
+    <section id="title">
+      <img class="bg-title absolute" src="src/design-3-title.png" alt="" />
+
+      <img
+        class="design-1-title absolute"
+        src="src/design-1-title.png"
+        alt=""
+      />
+      <img class="dog-title absolute" src="src/dog-title.png" alt="" />
+      <img
+        class="design-2-title absolute"
+        src="src/design-2-title.png"
+        alt=""
+      />
+      <nav class="navbar">
+        <h1 class="navbar-brand">Pet-First</h1>
+
+        <ul class="navbar-nav flex justify align">
+          <li class="nav-item">
+            <a class="nav-link" href="">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Madi-Care</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Blog</a>
+          </li>
+        </ul>
+
+        <button class="signup-btn design-btn">Sign up</button>
+      </nav>
+
+      <div class="title-text-container">
+        <div class="title-text flex">
+          <img class="design-title-img" src="src/design-title.png" alt="" />
+          <p class="title-text-p">Available in select states</p>
+        </div>
+        <h1 class="title-text-h1">
+          <b>A PET-FIRST</b>
+          APPROACH TO
+          <b>WELLNESS</b>
+        </h1>
+        <button class="title-btn design-btn">Learn More</button>
+      </div>
+    </section>
+
+    <!-- CATEGORY PAGE -->
+    <div id="category" class="section flex">
+      <img
+        src="src/design-1-category.png"
+        alt=""
+        class="design-1-img absolute"
+      />
+      <img
+        src="src/design-2-category.png"
+        alt=""
+        class="design-2-img absolute"
+      />
+      <div class="category-container-1 flex align justify">
+        <svg class="category-circle-text absolute" viewBox="0 0 100 100">
+          <defs>
+            <path
+              id="circle"
+              d="
+        M 50, 50
+        m -37, 0
+        a 37,37 0 1,1 74,0
+        a 37,37 0 1,1 -74,0"
+            />
+          </defs>
+          <text>
+            <textPath xlink:href="#circle">Different category</textPath>
+          </text>
+        </svg>
+        <div class="category-circle flex align justify">45+</div>
+      </div>
+      <div class="category-container-2 flex align">
+        <div class="category-col">
+          <img class="pet-img" src="src/pet-1-category.png" alt="" />
+          <img class="pet-img" src="src/pet-2-category.png" alt="" />
+        </div>
+        <div class="category-col category-col-active">
+          <p>Dog (Jasper)</p>
+          <img class="active-pet-img" src="src/pet-3-category.png" alt="" />
+        </div>
+        <div class="category-col">
+          <img class="pet-img" src="src/pet-4-category.png" alt="" />
+          <img class="pet-img" src="src/pet-5-category.png" alt="" />
+        </div>
+        <div class="category-col">
+          <img class="pet-img" src="src/pet-6-category.png" alt="" />
+          <img class="pet-img" src="src/pet-7-category.png" alt="" />
+        </div>
+        <div class="category-col">
+          <img class="pet-img" src="src/pet-8-category.png" alt="" />
+          <img class="pet-img" src="src/pet-9-category.png" alt="" />
+        </div>
+        <div class="category-col">
+          <img class="pet-img" src="src/pet-10-category.png" alt="" />
+          <img class="pet-img" src="src/pet-11-category.png" alt="" />
+        </div>
+        <div class="category-col">
+          <img class="pet-img" src="src/pet-12-category.png" alt="" />
+          <img class="pet-img" src="src/pet-13-category.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- OUR SERVICE PAGE -->
+    <section id="our-service">
+      <button class="prev-btn absolute" onclick="prevSlide()">&#10094;</button>
+      <button class="next-btn absolute" onclick="nextSlide()">&#10095;</button>
+      <img
+        class="our-service-design-1-img absolute"
+        src="src/our-service-design-1.png"
+        alt=""
+      />
+      <img
+        class="our-service-design-2-img absolute"
+        src="src/our-service-design-2.png"
+        alt=""
+      />
+      <h1 class="our-service-title">Our Service</h1>
+      <div class="carousel">
+        <div class="carousel-item carousel-item-1 carousel-active">
+          <div class="carousel-img flex justify align">
+            <img
+              class="carousel-icon"
+              src="src/our-service-icon-1.png"
+              alt=""
+            />
+          </div>
+          <h4 class="carousel-h4">Pharmacy</h4>
+          <p class="carousel-p">
+            Apoquel is an oral tablet that works differently than other allergy
+            medications. It goes straight to the source to help relieve itch and
+            inflammation at its core—addressing the underlying cause of
+            irritation
+          </p>
+          <button class="carousel-btn design-btn">Explore</button>
+        </div>
+
+        <div class="carousel-item carousel-item-2">
+          <div class="carousel-img flex justify align">
+            <img
+              class="carousel-icon"
+              src="src/our-service-icon-2.png"
+              alt=""
+            />
+          </div>
+          <h4 class="carousel-h4">Breed-specific Haircuts</h4>
+          <p class="carousel-p">
+            Regular grooming is essential to your pet's health as it helps
+            prevent skin issues such as matting.
+          </p>
+          <button class="carousel-btn design-btn">Explore</button>
+        </div>
+
+        <div class="carousel-item carousel-item-3">
+          <div class="carousel-img flex justify align">
+            <img
+              class="carousel-icon"
+              src="src/our-service-icon-3.png"
+              alt=""
+            />
+          </div>
+          <h4 class="carousel-h4">Cloths</h4>
+          <p class="carousel-p">
+            Is your dog at the top of his/her fashion game? Don't forget a dog
+            bikini or swim trunks for your pet's next vacation! Whether
+            poolside, at the beach, or on the yacht, your pooch will look
+            summer-ready
+          </p>
+          <button class="carousel-btn design-btn">Explore</button>
+        </div>
+
+        <div class="carousel-item carousel-item-4">
+          <div class="carousel-img flex justify align">
+            <img
+              class="carousel-icon"
+              src="src/our-service-icon-2.png"
+              alt=""
+            />
+          </div>
+          <h4 class="carousel-h4">Breed-specific Haircuts</h4>
+          <p class="carousel-p">
+            Regular grooming is essential to your pet's health as it helps
+            prevent skin issues such as matting.
+          </p>
+          <button class="carousel-btn design-btn">Explore</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORE PAGE -->
+    <section id="explore">
+      <img
+        class="explore-design-1 absolute"
+        src="src/explore-design-1.png"
+        alt=""
+      />
+      <img
+        class="explore-design-2 absolute"
+        src="src/explore-design-2.png"
+        alt=""
+      />
+      <div class="explore-col-1 flex justify align">
+        <img class="explore-img" src="src/img-explore.png" alt="" />
+      </div>
+      <div class="explore-col-2">
+        <h1>Making pet parenting easy for everyone</h1>
+        <p>
+          Could this be the dog with the longest tail? The Rampur Greyhound -
+          shy, sensitive, alert, and faithful. This is a breed that has climbed
+          its way to being top dog because of its intelligence
+        </p>
+        <ul>
+          <li>Adoption</li>
+          <li>Frozen Raw</li>
+          <li>Next Day Delivery</li>
+        </ul>
+        <button class="design-btn">Expore</button>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL PAGE -->
+    <section id="testimonial">
+      <img
+        class="design-1-testimonial absolute"
+        src="src/design-1-testimonial.png"
+        alt=""
+      />
+      <img
+        class="design-2-testimonial absolute"
+        src="src/design-2-testimonial.png"
+        alt=""
+      />
+      <img
+        class="design-3-testimonial absolute"
+        src="src/design-3-testimonial.png"
+        alt=""
+      />
+
+      <div class="testimonial-col-1 flex align justify">
+        <img class="testimonial-img" src="src/img-testimonial.png" alt="" />
+      </div>
+      <div class="testimonial-col-2">
+        <h2>Customer Reviews</h2>
+        <div class="testimonial-text">
+          <p>
+            As we continue to push for better regulation in the Australian pet
+            food industry it can be hard to trust many pet food brands. Our 2021
+            Best Cat Food in Australia list will offer you a great starting
+            point in deciding what to feed your cat.
+          </p>
+        </div>
+        <div class="testimonial-btn">
+          <button class="testimonial-prev-btn prev-btn">&#10094;</button>
+          <button class="testimonial-next-btn next-btn">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="section flex">
+      <img
+        class="absolute contact-design-1"
+        src="src/design-1-contact.png"
+        alt=""
+      />
+      <div class="contact-col-1 flex align justify">
+        <img class="contact-dog-img" src="src/dog-contact.png" alt="" />
+        <img
+          class="contact-design-2 absolute"
+          src="src/design-2-contact.png"
+          alt=""
+        />
+      </div>
+      <div class="contact-col-2">
+        <h1>
+          Subscribe & Get Pet <br />
+          Updatenews
+        </h1>
+        <input type="text" placeholder="Mail" />
+        <button class="contact-btn">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- FOOTER PAGE -->
+    <div id="footer" class="section flex">
+      <img src="" alt="" />
+      <div class="footer-col-1 flex justify align">
+        <h1>Pet-First</h1>
+      </div>
+      <div class="footer-col-2">
+        <div class="footer-col-2-row-1 flex align">
+          <p>About</p>
+          <p>Project</p>
+          <p>Service</p>
+          <p>Client</p>
+          <p>Team</p>
+          <p>Blog</p>
+          <p>Contact</p>
+        </div>
+        <div class="footer-col-2-row-2 flex align">
+          <p>Flow</p>
+          <i class="footer-icon fa-brands fa-facebook fa-xl"></i>
+          <i class="footer-icon fa-brands fa-instagram fa-xl"></i>
+          <i class="footer-icon fa-brands fa-x-twitter fa-xl"></i>
+        </div>
+      </div>
+    </div>
+    <p class="credits flex justify">
+      Inspired from :
+      <a href="@https://www.figma.com/@shovonkhan0099"> @shovonkhan0099</a>
+    </p>
+    <script src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9167e67df8.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
