@@ -55,47 +55,6 @@ a:visited {
 .section {
   height: 40%;
 }
-.flex {
-  display: flex;
-}
-.justify {
-  justify-content: center;
-}
-.align {
-  align-items: center;
-}
-.absolute {
-  position: absolute;
-}
-
-.design-btn {
-  padding: 0.7rem 1rem;
-  border-radius: 50px;
-  border: solid #ffffff00 1.5px;
-  background-color: #ed5c01;
-  color: #fff;
-  font-family: "Josefin Sans", sans-serif;
-}
-.prev-btn {
-  top: 90%;
-  right: 32%;
-  z-index: 1;
-  background-color: #062d3e;
-  padding: 0.2rem 2rem;
-  border-radius: 100%;
-  border: none;
-  color: #fff;
-}
-.next-btn {
-  top: 90%;
-  right: 28%;
-  z-index: 1;
-  background-color: #062d3e;
-  padding: 0.2rem 2rem;
-  border-radius: 100%;
-  border: solid #ffffff 1.5px;
-  color: #fff;
-}
 
 /* ----------------NAVBAR-PAGE-----------------*/
 .navbar {
@@ -860,16 +819,19 @@ a:visited {
 }
 
 .credits {
-  background-color: #062d3e;
+  background-color: #189cab;
   color: #fff;
   font-weight: 300;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .credits > a {
   color: #fff;
   text-decoration: none;
+  display: flex;
 }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   #footer {
     display: block;
