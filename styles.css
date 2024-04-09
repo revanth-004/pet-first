@@ -802,6 +802,9 @@ a:visited {
     height: 30% !important;
     padding: 3% 8%;
   }
+  .contact-col-2 > h1 {
+    font-size: 1.5rem;
+  }
   .contact-design-1 {
     display: none;
   }
