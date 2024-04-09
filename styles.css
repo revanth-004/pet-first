@@ -26,6 +26,7 @@ section {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: #062d3e;
 }
 a:link {
   color: #062d3e;
