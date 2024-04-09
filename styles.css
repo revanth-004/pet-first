@@ -193,6 +193,12 @@ a:visited {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .navbar {
     align-items: start;
+    background-color: #189cab;
+    border-radius: 50px;
+    padding: 0vh 5vw;
+    position: fixed;
+    width: 85vw;
+    z-index: 10;
   }
   .navbar-nav {
     display: block;
@@ -202,12 +208,31 @@ a:visited {
   }
   .navbar-brand {
     margin: 10px 0;
+    color: #ebe3cc;
+  }
+  .nav-link:link {
+    color: #ebe3cc;
+  }
+  .nav-link:visited {
+    color: #ebe3cc;
+  }
+  .nav-icon {
+    display: block;
+    padding: 10px 0;
+    color: #ebe3cc;
   }
   #title {
     overflow-x: hidden;
   }
   .title-page {
     display: block;
+  }
+  .title-text-container {
+    padding: 5vh 0;
+    width: 100%;
+  }
+  .title-text-h1 > b {
+    color: #189cab;
   }
   .title-text-h1 {
     font-size: 2.5rem;
@@ -231,15 +256,12 @@ a:visited {
   }
   .signup-btn {
     font-size: 1rem;
-    border: solid #ed5c01 1.5px;
+    border: solid #ebe3cc 1.5px;
     background-color: #ed5c0100;
-    color: #ed5c01;
-    padding: 0.5rem 1rem;
-    transform: translateX(10vw);
-  }
-  .nav-icon {
-    display: block;
-    padding: 10px 0;
+    color: #ebe3cc;
+    padding: 0.3rem 1rem;
+    margin-top: 2%;
+    transform: translateX(8vw);
   }
 }
 

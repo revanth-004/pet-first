@@ -8,7 +8,8 @@ var transformValue=0;
  
  
 
-function navbar(){
+function navbarFuntion(){
+  const navbar=document.querySelector(".navbar");
   var elements=document.querySelectorAll(".nav-item");
   elements.forEach(function(element) {
     if (window.getComputedStyle(element).display === "none") {
@@ -16,7 +17,12 @@ function navbar(){
     } else {
         element.style.display = "none";
     }
-});
+  });
+  if (window.getComputedStyle(navbar).borderRadius === "5px"){
+      navbar.style.borderRadius="50px";
+  }else{
+      navbar.style.borderRadius="5px";
+  }
 }
 
 function prevSlide(xoffset) {
