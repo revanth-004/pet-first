@@ -1,32 +1,64 @@
-let currentIndex = 0;
-const totalItems = document.querySelectorAll('.carousel-item').length;
+"use strict";
+
 const carousel = document.querySelector('.carousel');
+const carouselItem = document.querySelector('.carousel-item');
+const dogImage = document.querySelector('.dog-title');
+var dogSlider=1;
+var transformValue=0;
+ 
+ 
 
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-  updateCarousel();
-}
-
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % totalItems;
-  updateCarousel();
-}
-
-function updateCarousel() {
-  const items = document.querySelectorAll('.carousel-item');
-  
-  items.forEach((item, index) => {
-    if (index === currentIndex) {
-      item.classList.add('carousel-active');
+function navbar(){
+  var elements=document.querySelectorAll(".nav-item");
+  elements.forEach(function(element) {
+    if (window.getComputedStyle(element).display === "none") {
+        element.style.display = "block";
     } else {
-      item.classList.remove('carousel-active');
+        element.style.display = "none";
     }
-  });
-
-  const itemWidth = items[0].offsetWidth; // Get the width of one carousel item
-  const transformValue = -currentIndex * itemWidth;
-  carousel.style.transform = `translateX(${transformValue}px)`; // Adjust the transform property to move the carousel
+});
 }
 
-// Initially call updateCarousel to set the initial active item
-updateCarousel();
+function prevSlide(xoffset) {
+  transformValue=transformValue+xoffset;
+  if(transformValue ==xoffset){
+    transformValue=(xoffset*3)*(-1);
+  }
+ carousel.style.transform = `translateX(${transformValue}px)`; 
+ 
+};
+
+function nextSlide(xoffset) {
+  transformValue=transformValue-xoffset;
+  if(transformValue==(xoffset*4)*(-1)){
+    transformValue=0;
+  }
+  carousel.style.transform = `translateX(${transformValue}px)`;
+  console.log("transform:"+transformValue+"xoffset :"+xoffset) ;
+};
+
+
+function dogPrevSlide(){
+  document.querySelector(".dog-circle-"+dogSlider).classList.remove("active");
+  dogSlider-=1;
+  if (dogSlider==0){
+    dogSlider=4;
+  }
+  document.querySelector(".dog-circle-"+dogSlider).classList.add("active");
+  dogImage.src="src/dog-title-"+dogSlider+".png";
+}
+
+function dogNextSlide(){
+  document.querySelector(".dog-circle-"+dogSlider).classList.remove("active");
+  dogSlider+=1;
+  if (dogSlider==5){
+    dogSlider=1;
+  }
+  document.querySelector(".dog-circle-"+dogSlider).classList.add("active");
+  dogImage.src="src/dog-title-"+dogSlider+".png";
+}
+
+setInterval(dogNextSlide, 5000);   
+setInterval(function() {
+    nextSlide(400);
+}, 5000);  

@@ -7,70 +7,74 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- LANDING PAGE -->
+    <!-- TITLE PAGE -->
     <section id="title">
-      <img class="bg-title absolute" src="src/design-3-title.png" alt="" />
-
-      <img
-        class="design-1-title absolute"
-        src="src/design-1-title.png"
-        alt=""
-      />
-      <img class="dog-title absolute" src="src/dog-title.png" alt="" />
-      <img
-        class="design-2-title absolute"
-        src="src/design-2-title.png"
-        alt=""
-      />
+      <!-- NAVBAR-->
       <nav class="navbar">
-        <h1 class="navbar-brand">Pet-First</h1>
-
-        <ul class="navbar-nav flex justify align">
+        <ul class="navbar-nav">
+          <h1 class="navbar-brand">Pet-First</h1>
           <li class="nav-item">
-            <a class="nav-link" href="">About</a>
+            <a class="nav-link" href="#our-service">Our Service</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Service</a>
+            <a class="nav-link" href="#explore">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Madi-Care</a>
+            <a class="nav-link" href="#testimonial">Reviews</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Blog</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
+        <button class="signup-btn">Sign up</button>
 
-        <button class="signup-btn design-btn">Sign up</button>
+        <button class="nav-icon">
+          <i class="fa fa-bars" onclick="navbar()"></i>
+        </button>
       </nav>
-
-      <div class="title-text-container">
-        <div class="title-text flex">
-          <img class="design-title-img" src="src/design-title.png" alt="" />
-          <p class="title-text-p">Available in select states</p>
+      <div class="title-page">
+        <div class="title-text-container">
+          <div class="title-text">
+            <img class="title-text-img" src="src/design-title.png" alt="" />
+            <p class="title-text-p">Available in select states</p>
+          </div>
+          <h1 class="title-text-h1">
+            <b>A PET-FIRST</b>
+            APPROACH TO
+            <b>WELLNESS</b>
+          </h1>
+          <button class="title-btn">
+            <a href="#contact">Learn More</a>
+          </button>
         </div>
-        <h1 class="title-text-h1">
-          <b>A PET-FIRST</b>
-          APPROACH TO
-          <b>WELLNESS</b>
-        </h1>
-        <button class="title-btn design-btn">Learn More</button>
+
+        <div class="dog-slide">
+          <img class="dog-title" src="src/dog-title-1.png" alt="" />
+
+          <div class="dog-slider">
+            <button class="dog-prev-btn" onclick="dogPrevSlide()">
+              &#10094;
+            </button>
+            <div class="dog-slider-pointer">
+              <div class="dog-circle-1 circle active"></div>
+              <div class="dog-circle-2 circle"></div>
+              <div class="dog-circle-3 circle"></div>
+              <div class="dog-circle-4 circle"></div>
+            </div>
+            <button class="dog-next-btn" onclick="dogNextSlide()">
+              &#10095;
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- CATEGORY PAGE -->
-    <div id="category" class="section flex">
-      <img
-        src="src/design-1-category.png"
-        alt=""
-        class="design-1-img absolute"
-      />
-      <img
-        src="src/design-2-category.png"
-        alt=""
-        class="design-2-img absolute"
-      />
-      <div class="category-container-1 flex align justify">
-        <svg class="category-circle-text absolute" viewBox="0 0 100 100">
+    <div id="category" class="section">
+      <img src="src/design-1-category.png" alt="" class="design-1-img" />
+      <img src="src/design-2-category.png" alt="" class="design-2-img" />
+      <div class="category-container-1">
+        <svg class="category-circle-text" viewBox="0 0 100 100">
           <defs>
             <path
               id="circle"
@@ -85,9 +89,9 @@
             <textPath xlink:href="#circle">Different category</textPath>
           </text>
         </svg>
-        <div class="category-circle flex align justify">45+</div>
+        <div class="category-circle">45+</div>
       </div>
-      <div class="category-container-2 flex align">
+      <div class="category-container-2">
         <div class="category-col">
           <img class="pet-img" src="src/pet-1-category.png" alt="" />
           <img class="pet-img" src="src/pet-2-category.png" alt="" />
@@ -121,22 +125,26 @@
 
     <!-- OUR SERVICE PAGE -->
     <section id="our-service">
-      <button class="prev-btn absolute" onclick="prevSlide()">&#10094;</button>
-      <button class="next-btn absolute" onclick="nextSlide()">&#10095;</button>
+      <button class="service-prev-btn" onclick="prevSlide(400)">
+        &#10094;
+      </button>
+      <button class="service-next-btn" onclick="nextSlide(400)">
+        &#10095;
+      </button>
       <img
-        class="our-service-design-1-img absolute"
+        class="our-service-design-1-img"
         src="src/our-service-design-1.png"
         alt=""
       />
       <img
-        class="our-service-design-2-img absolute"
+        class="our-service-design-2-img"
         src="src/our-service-design-2.png"
         alt=""
       />
       <h1 class="our-service-title">Our Service</h1>
       <div class="carousel">
         <div class="carousel-item carousel-item-1 carousel-active">
-          <div class="carousel-img flex justify align">
+          <div class="carousel-img">
             <img
               class="carousel-icon"
               src="src/our-service-icon-1.png"
@@ -150,11 +158,11 @@
             inflammation at its core—addressing the underlying cause of
             irritation
           </p>
-          <button class="carousel-btn design-btn">Explore</button>
+          <button class="carousel-btn">Explore</button>
         </div>
 
         <div class="carousel-item carousel-item-2">
-          <div class="carousel-img flex justify align">
+          <div class="carousel-img">
             <img
               class="carousel-icon"
               src="src/our-service-icon-2.png"
@@ -166,11 +174,11 @@
             Regular grooming is essential to your pet's health as it helps
             prevent skin issues such as matting.
           </p>
-          <button class="carousel-btn design-btn">Explore</button>
+          <button class="carousel-btn">Explore</button>
         </div>
 
-        <div class="carousel-item carousel-item-3">
-          <div class="carousel-img flex justify align">
+        <div class="carousel-item carousel-item-3 carousel-active">
+          <div class="carousel-img">
             <img
               class="carousel-icon"
               src="src/our-service-icon-3.png"
@@ -184,11 +192,11 @@
             poolside, at the beach, or on the yacht, your pooch will look
             summer-ready
           </p>
-          <button class="carousel-btn design-btn">Explore</button>
+          <button class="carousel-btn">Explore</button>
         </div>
 
         <div class="carousel-item carousel-item-4">
-          <div class="carousel-img flex justify align">
+          <div class="carousel-img">
             <img
               class="carousel-icon"
               src="src/our-service-icon-2.png"
@@ -200,24 +208,16 @@
             Regular grooming is essential to your pet's health as it helps
             prevent skin issues such as matting.
           </p>
-          <button class="carousel-btn design-btn">Explore</button>
+          <button class="carousel-btn">Explore</button>
         </div>
       </div>
     </section>
 
     <!-- EXPLORE PAGE -->
     <section id="explore">
-      <img
-        class="explore-design-1 absolute"
-        src="src/explore-design-1.png"
-        alt=""
-      />
-      <img
-        class="explore-design-2 absolute"
-        src="src/explore-design-2.png"
-        alt=""
-      />
-      <div class="explore-col-1 flex justify align anim">
+      <img class="explore-design-1" src="src/explore-design-1.png" alt="" />
+      <img class="explore-design-2" src="src/explore-design-2.png" alt="" />
+      <div class="explore-col-1">
         <img class="explore-img" src="src/img-explore.png" alt="" />
       </div>
       <div class="explore-col-2">
@@ -232,29 +232,29 @@
           <li>Frozen Raw</li>
           <li>Next Day Delivery</li>
         </ul>
-        <button class="design-btn">Expore</button>
+        <button class="expore-btn">Expore</button>
       </div>
     </section>
 
     <!-- TESTIMONIAL PAGE -->
     <section id="testimonial">
       <img
-        class="design-1-testimonial absolute"
+        class="design-1-testimonial"
         src="src/design-1-testimonial.png"
         alt=""
       />
       <img
-        class="design-2-testimonial absolute"
+        class="design-2-testimonial"
         src="src/design-2-testimonial.png"
         alt=""
       />
       <img
-        class="design-3-testimonial absolute"
+        class="design-3-testimonial"
         src="src/design-3-testimonial.png"
         alt=""
       />
 
-      <div class="testimonial-col-1 flex align justify">
+      <div class="testimonial-col-1">
         <img class="testimonial-img" src="src/img-testimonial.png" alt="" />
       </div>
       <div class="testimonial-col-2">
@@ -268,26 +268,18 @@
           </p>
         </div>
         <div class="testimonial-btn">
-          <button class="testimonial-prev-btn prev-btn">&#10094;</button>
-          <button class="testimonial-next-btn next-btn">&#10095;</button>
+          <button class="testimonial-prev-btn">&#10094;</button>
+          <button class="testimonial-next-btn">&#10095;</button>
         </div>
       </div>
     </section>
 
     <!-- CONTACT PAGE -->
-    <div id="contact" class="section flex">
-      <img
-        class="absolute contact-design-1"
-        src="src/design-1-contact.png"
-        alt=""
-      />
-      <div class="contact-col-1 flex align justify">
+    <div id="contact" class="section">
+      <img class="contact-design-1" src="src/design-1-contact.png" alt="" />
+      <div class="contact-col-1">
         <img class="contact-dog-img" src="src/dog-contact.png" alt="" />
-        <img
-          class="contact-design-2 absolute"
-          src="src/design-2-contact.png"
-          alt=""
-        />
+        <img class="contact-design-2" src="src/design-2-contact.png" alt="" />
       </div>
       <div class="contact-col-2">
         <h1>
@@ -300,30 +292,26 @@
     </div>
 
     <!-- FOOTER PAGE -->
-    <div id="footer" class="section flex">
+    <div id="footer" class="section">
       <img src="" alt="" />
-      <div class="footer-col-1 flex justify align">
+      <div class="footer-col-1">
         <h1>Pet-First</h1>
       </div>
       <div class="footer-col-2">
-        <div class="footer-col-2-row-1 flex align">
-          <p>About</p>
-          <p>Project</p>
-          <p>Service</p>
-          <p>Client</p>
-          <p>Team</p>
-          <p>Blog</p>
-          <p>Contact</p>
+        <div class="footer-col-2-row-1">
+          <p><a href="#our-service">Our Service</a></p>
+          <p><a href="#explore">About</a></p>
+          <p><a href="#testimonial">Reviews</a></p>
+          <p><a href="#contact">Contact</a></p>
         </div>
-        <div class="footer-col-2-row-2 flex align">
-          <p>Flow</p>
+        <div class="footer-col-2-row-2">
           <i class="footer-icon fa-brands fa-facebook fa-xl"></i>
           <i class="footer-icon fa-brands fa-instagram fa-xl"></i>
           <i class="footer-icon fa-brands fa-x-twitter fa-xl"></i>
         </div>
       </div>
     </div>
-    <p class="credits flex justify">
+    <p class="credits">
       Inspired from :
       <a href="@https://www.figma.com/@shovonkhan0099"> @shovonkhan0099</a>
     </p>
